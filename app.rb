@@ -9,7 +9,7 @@ CustomError = StandardError.new
 
 get '/' do
   redirect '/info' if request.query_string.length < 2
-  
+
   url = request.query_string
   response.headers["Access-Control-Allow-Origin"] = "*"
   httpGet(url).body
@@ -20,7 +20,7 @@ get '/info' do
 end
 
 get '/*' do
-  url = params[:splat].gsub(':/', '://')
+  url = params[:splat].join.gsub(':/', '://')
   response.headers["Access-Control-Allow-Origin"] = "*"
   httpGet(url).body
 end
