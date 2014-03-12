@@ -8,15 +8,11 @@ Bundler.require
 CustomError = StandardError.new
 
 get '/' do
-  redirect '/info' if request.query_string.length < 2
+  halt haml :index if request.query_string.length < 2
 
   url = request.query_string
   response.headers["Access-Control-Allow-Origin"] = "*"
   httpGet(url).body
-end
-
-get '/info' do
-  haml :index
 end
 
 get '/*' do
