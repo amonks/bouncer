@@ -1,0 +1,7 @@
+source 'https://rubygems.org'
+ruby '2.0.0'
+gem 'sinatra'
+gem 'pry'
+gem 'json'
+gem 'maruku'
+gem 'haml'
