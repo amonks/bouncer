@@ -35,7 +35,6 @@ PLATFORMS
 DEPENDENCIES
   haml
   httparty
-  json
   maruku
   pry
   sinatra
