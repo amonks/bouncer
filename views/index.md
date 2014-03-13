@@ -1,6 +1,4 @@
-## Howdy!
-
-### I'm [Andrew](http://monks.co/).
+## Howdy! <span class="small">I'm [Andrew](http://monks.co/).</span>
 
 #### Are you into client-side development?
 
