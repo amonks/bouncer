@@ -28,8 +28,9 @@ module Bouncer
     url = fixUrl(url)
     response = HTTParty.get(url)
     return response
+  rescue
+    halt errorPage('I couldn\'t connect to that server...')
   end
-
 
   def checkImg(url)
     halt errorPage('I don\'t proxy images...') if url.downcase.match(/\.(png|jpg|gif|tiff|raw|ico)$/i)
