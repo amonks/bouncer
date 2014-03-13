@@ -9,6 +9,10 @@ This readme concerns running your own instance of Bouncer. There's a free, worki
 	git clone https://github.com/amonks/bouncer.git
 	cd bouncer
 
+## configure
+
+edit `@baseUrl = 'b.youwouldntstealacar.com'` in `app.rb` to your own baseUrl
+
 ## run locally
 
 	bundle install 

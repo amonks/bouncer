@@ -1,6 +1,14 @@
 require 'bundler'
 Bundler.require
 
+# config
+
+@baseUrl = 'b.youwouldntstealacar.com'
+
+configure do
+  set :baseUrl, @baseUrl
+end
+
 # bouncer
 require_relative 'lib/bouncer'
 include Bouncer
@@ -8,8 +16,8 @@ include Bouncer
 # routing
 
 # js lib
-get '/b.ss.cx.min.js' do
-  Uglifier.compile((File.read("lib/b.ss.cx.js")))
+get '/' + settings.baseUrl + '.min.js' do
+  Uglifier.compile(File.read('lib/bouncer.js')).gsub('[[@baseUrl]]', settings.baseUrl)
 end
 
 # index or query string

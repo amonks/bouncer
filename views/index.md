@@ -12,13 +12,13 @@ The 90% of the times when I have to resort to server-side code, it's to get data
 
 If you try to make an HTTP request from client-side javascript, you'll usually get an error because of the [same-origin policy](http://en.wikipedia.org/wiki/Same-origin_policy). Essentially servers keep a whitelist of hosts that can request each page from javascript.
 
-### b.ss.cx!
+### [[@baseUrl]]!
 
-In comes `b.ss.cx`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
+In comes `[[@baseUrl]]`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
 
-Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/google.com`.
+Simply add `http://[[@baseUrl]]/` to the beginning of the url you're requesting, eg `http://[[@baseUrl]]/google.com`.
 
-Or, include the [tiny js library](/b.ss.cx.min.js) and try `Bouncer.get('google.com');`.
+Or, include the [tiny js library](/[[@baseUrl]].js) and try `Bouncer.get('google.com');`.
 
 Or, if you're super serious, [run it yourself](http://github.com/amonks/bouncer).
 
