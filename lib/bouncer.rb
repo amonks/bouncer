@@ -25,7 +25,7 @@ module Bouncer
 
   def httpGet(url)
     checkImg(url)
-    url = fixUrl(url)
+    url = 'http://' + url unless url.include? '://'
     response = HTTParty.get(url)
     return response
   rescue
@@ -34,13 +34,6 @@ module Bouncer
 
   def checkImg(url)
     halt errorPage('I don\'t proxy images...') if url.downcase.match(/\.(png|jpg|gif|tiff|raw|ico)$/i)
-  end
-
-  def fixUrl(url)
-    halt errorPage('Seems like this isn\'t a real url...') unless url.match /\./
-    url = 'http://' + url unless url.include? '://'
-    halt errorPage('Seems like this isn\'t a real url...') unless url =~ /^#{URI::regexp}$/
-    return url
   end
 
 end
