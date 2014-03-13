@@ -19,11 +19,3 @@ Simply add `http://[[@baseUrl]]/` to the beginning of the url you're requesting,
 Or, include the [tiny js library](/[[@baseUrl]].js) ([152b minified](/[[@baseUrl]].min.js)) and try `Bouncer.get('google.com');`.
 
 Or, if you're super serious, [run it yourself](http://github.com/amonks/bouncer).
-
-#### Is it reliable?
-
-Yes. I'm working on optimizing the server to make sure everything's all speedy and asynchronous.
-
-#### Sustainable?
-
-If hosting bills get out of hand, I might eventually implement a very high rate limit, or charge for additional features like encrypted storage of API keys or proxying media files.
