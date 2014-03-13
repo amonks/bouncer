@@ -3,6 +3,8 @@ Bundler.require
 
 # config
 
+set :environment, :production
+
 @baseUrl = 'b.youwouldntstealacar.com'
 
 configure do
