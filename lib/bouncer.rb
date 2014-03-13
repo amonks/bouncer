@@ -10,6 +10,7 @@ module Bouncer
 
   def bounce(url)
     out = fetch(url,3)
+    response.headers["Access-Control-Allow-Origin"] = "*"
     return out
   end
 
