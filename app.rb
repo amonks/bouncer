@@ -1,5 +1,4 @@
 require 'bundler'
-require 'net/http'
 Bundler.require
 
 # routing
@@ -19,41 +18,12 @@ get '/*' do
 end
 
 def errorPage(message)
-  @message  = message
-  haml :error
+  status 404
+  @errorMessage  = message
+  haml :index
 end
 
 # functions
-
-def httpGet(url)
-  uri = validateAndParseUrl(url)
-
-  req = Net::HTTP::Get.new(uri.path)
-
-  res = Net::HTTP.start(uri.host, uri.port) {|http|
-    http.request(req)
-  }
-
-  return res
-end
-
-def checkUri(uri)
-  halt errorPage('Seems like this isn\'t a real url...') unless uri.path.length > 0
-  halt errorPage('I can\'t find the host domain...') unless uri.host
-  halt errorPage('I can\'t choose a port...') unless uri.port
-end
-
-def checkImg(url)
-  halt haml :type if url.downcase.match(/\.(png|jpg|gif|tiff|raw)$/i)
-end
-
-def fixUrl(url)
-  url = 'http://' + url unless url.include? '://'
-  halt errorPage('I can\'t handle `https://` requests...') if url.match(/^https/)
-  url =  url + '/' unless url.match(/\/\/.*\/\./)
-  halt errorPage('Seems like this isn\'t a real url...') unless url =~ /^#{URI::regexp}$/
-  return url
-end
 
 def bounce(url)
   response.headers["Access-Control-Allow-Origin"] = "*"
@@ -70,10 +40,21 @@ def fetch(url,maxRequests)
   return out
 end
 
-def validateAndParseUrl(url)
+def httpGet(url)
   checkImg(url)
   url = fixUrl(url)
-  uri = URI::parse(url) if URI::parse(url)
-  checkUri(uri)
-  return uri
+  response = HTTParty.get(url)
+  return response
+end
+
+
+def checkImg(url)
+  halt errorPage('I don\'t proxy images...') if url.downcase.match(/\.(png|jpg|gif|tiff|raw|ico)$/i)
+end
+
+def fixUrl(url)
+  halt errorPage('Seems like this isn\'t a real url...') unless url.match /\./
+  url = 'http://' + url unless url.include? '://'
+  halt errorPage('Seems like this isn\'t a real url...') unless url =~ /^#{URI::regexp}$/
+  return url
 end

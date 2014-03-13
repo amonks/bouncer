@@ -1,11 +1,27 @@
-## Hi!
+## Howdy!
 
-Ever tried to make an HTTP GET request from client-side JavaScript? Maybe to access an API or something?
+### I'm [Andrew](http://monks.co/).
 
-You can't unless the page you're requesting specifically whitelisted you!
+#### Are you into client-side development?
 
-It's terrible!
+I am. I gotta say—I'm a follower. I've wholeheartedly jumped on the all-client-side-everything bandwagon. But there are some things you traditionally can't do on the client side.
 
-That's why Bouncer exists. It's a super simple proxy for client-side HTTP requests. It accepts requests from anyone anywhere. 
+#### Have you ever tried to load externally-hosted data from javascript?
 
-Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/http://google.com/`
+The 90% of the times when I have to resort to server-side code, it's to get data from a website—make an API request, load a page, who knows. 
+
+If you try to make an HTTP request from client-side javascript, you'll usually get an error because of the [same-origin policy](http://en.wikipedia.org/wiki/Same-origin_policy). Essentially servers keep a whitelist of hosts that can request each page from javascript.
+
+### b.ss.cx!
+
+In comes `b.ss.cx`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
+
+Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/http://google.com/`.
+
+#### Is it reliable?
+
+Yes. I'm working on optimizing the server to make sure everything's all speedy and asynchronous.
+
+#### Sustainable?
+
+If hosting bills get out of hand, I might eventually implement a very high rate limit, or charge for additional features like encrypted storage of API keys or proxying media files.
