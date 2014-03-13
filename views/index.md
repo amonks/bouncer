@@ -18,7 +18,9 @@ In comes `b.ss.cx`. It's a super simple proxy for getting around the same-origin
 
 Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/google.com`.
 
-Or, include the [tiny js library](/b.ss.cx.min.js) and try `Bouncer.get('google.com');`
+Or, include the [tiny js library](/b.ss.cx.min.js) and try `Bouncer.get('google.com');`.
+
+Or, if you're super serious, [run it yourself](http://github.com/amonks/bouncer).
 
 #### Is it reliable?
 
