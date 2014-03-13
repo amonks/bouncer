@@ -16,7 +16,9 @@ If you try to make an HTTP request from client-side javascript, you'll usually g
 
 In comes `b.ss.cx`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
 
-Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/http://google.com/`.
+Simply add `http://b.ss.cx/` to the beginning of the url you're requesting, eg `http://b.ss.cx/google.com`.
+
+Or, include the [tiny js library](/b.ss.cx.min.js) and try `Bouncer.get('google.com');`
 
 #### Is it reliable?
 
