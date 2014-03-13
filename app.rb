@@ -16,7 +16,12 @@ include Bouncer
 # routing
 
 # js lib
+get '/' + settings.baseUrl + '.js' do
+  content_type 'application/javascript'
+  File.read('lib/bouncer.js').gsub('[[@baseUrl]]', settings.baseUrl)
+end
 get '/' + settings.baseUrl + '.min.js' do
+  content_type 'application/javascript'
   Uglifier.compile(File.read('lib/bouncer.js')).gsub('[[@baseUrl]]', settings.baseUrl)
 end
 
