@@ -11,7 +11,6 @@ GEM
     kgio (2.9.2)
     maruku (0.7.1)
     multi_xml (0.5.5)
-    newrelic_rpm (3.7.3.204)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
@@ -36,7 +35,6 @@ DEPENDENCIES
   haml
   httparty
   maruku
-  newrelic_rpm
   sinatra
   uglifier
   unicorn

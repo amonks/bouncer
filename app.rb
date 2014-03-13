@@ -3,12 +3,12 @@ Bundler.require
 
 # config
 
-set :environment, :production
-
 @baseUrl = 'b.youwouldntstealacar.com'
+
 
 configure do
   set :baseUrl, @baseUrl
+  set :environment, :production
 end
 
 # bouncer
