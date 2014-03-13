@@ -3,7 +3,7 @@ Bundler.require
 
 # config
 
-@baseUrl = 'b.youwouldntstealacar.com'
+@baseUrl = 'b.ss.cx'
 
 
 configure do
