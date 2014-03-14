@@ -21,7 +21,7 @@ edit `@baseUrl = 'b.ss.cx'` in `app.rb` to your own baseUrl
 set `@baseurl` to `'localhost:3000'`
 
 	bundle install 
-	bundle exec ruby app.rb
+	bundle exec puma -C config/puma.rb
 
 open `http://localhost:3000` in your browser
 
