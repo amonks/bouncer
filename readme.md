@@ -2,7 +2,10 @@
 
 Bouncer is a super simple sinatra-based proxy for client apps that only need a server for making requests.
 
-This readme concerns running your own instance of Bouncer. There's a free, working installation available for use at [b.ss.cx](http://b.youwouldntstealacar.com).
+Bouncer uses [unicorn](http://unicorn.bogomips.org/) for multithreaded asynchronicity. You can change the maximum number of threads in `config/unicorn.rb`.
+
+This readme concerns running your own instance of Bouncer. There's a free, working installation available for use at [b.ss.cx](http://b.ss.cx).
+
 
 ## install
 
