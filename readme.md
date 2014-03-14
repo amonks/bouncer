@@ -11,9 +11,11 @@ This readme concerns running your own instance of Bouncer. There's a free, worki
 
 ## configure
 
-edit `@baseUrl = 'b.youwouldntstealacar.com'` in `app.rb` to your own baseUrl
+edit `@baseUrl = 'b.ss.cx'` in `app.rb` to your own baseUrl
 
 ## run locally
+
+set `@baseurl` to `'localhost:4567'`
 
 	bundle install 
 	bundle exec ruby app.rb
@@ -21,5 +23,9 @@ edit `@baseUrl = 'b.youwouldntstealacar.com'` in `app.rb` to your own baseUrl
 ## push to heroku
 
 	heroku apps:create
+
+set `@baseurl` to the url heroku gives you
+
+	git commit -am 'set url'
 	git push heroku master
 	heroku open
