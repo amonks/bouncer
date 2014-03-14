@@ -16,6 +16,8 @@ In comes `[[@baseUrl]]`. It's a super simple proxy for getting around the same-o
 
 Simply add `http://[[@baseUrl]]/` to the beginning of the url you're requesting, eg `http://[[@baseUrl]]/google.com`.
 
+It's configurerd not to support anything you could pull in through an `img` tag.
+
 Or, include the [tiny js library](/[[@baseUrl]].js) ([152b minified](/[[@baseUrl]].min.js)) and try `Bouncer.get('google.com');`.
 
 Or, if you're super serious, [run the server](http://github.com/amonks/bouncer) yourself.
