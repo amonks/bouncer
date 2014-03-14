@@ -2,7 +2,7 @@
 
 Bouncer is a super simple sinatra-based proxy for client apps that only need a server for making requests.
 
-Bouncer uses [unicorn](http://unicorn.bogomips.org/) for multithreaded asynchronicity. You can change the maximum number of threads in `config/unicorn.rb`.
+Bouncer uses [puma](http://puma.io/) for multithreaded asynchronicity. You can change the maximum number of threads or workers in `config/puma.rb`.
 
 This readme concerns running your own instance of Bouncer. There's a free, working installation available for use at [b.ss.cx](http://b.ss.cx).
 
@@ -18,10 +18,12 @@ edit `@baseUrl = 'b.ss.cx'` in `app.rb` to your own baseUrl
 
 ## run locally
 
-set `@baseurl` to `'localhost:4567'`
+set `@baseurl` to `'localhost:3000'`
 
 	bundle install 
 	bundle exec ruby app.rb
+
+open `http://localhost:3000` in your browser
 
 ## push to heroku
 
