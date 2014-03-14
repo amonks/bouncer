@@ -24,9 +24,10 @@ module Bouncer
   end
 
   def httpGet(url)
-    checkImg(url)
     url = 'http://' + url unless url.include? '://'
+    checkImg(url)
     response = HTTParty.get(url)
+    binding.pry
     return response
   rescue
     halt errorPage('I couldn\'t connect to that server...')
