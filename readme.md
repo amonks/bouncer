@@ -41,5 +41,7 @@ set `@baseurl` to the url heroku gives you
 
 go to the app's page on your heroku dashboard and click newrelic to get to your New Relic dashboard. Follow their instructions, generating a `newrelic.yml` file and putting it in `config/`.
 
+Under settings, you should turn on availability monitoring.
+
 	git commit -am 'configure newrelic'
 	git push heroku master
