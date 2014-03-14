@@ -27,6 +27,7 @@ module Bouncer
     url = 'http://' + url unless url.include? '://'
     checkImg(url)
     response = HTTParty.get(url)
+    halt errorPage('I got a 404 from the server...') if response.code == 404
     return response
   rescue
     halt errorPage('I couldn\'t connect to that server...')
