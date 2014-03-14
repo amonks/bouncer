@@ -9,7 +9,6 @@ GEM
       json (~> 1.8)
       multi_xml (>= 0.5.2)
     json (1.8.1)
-    kgio (2.9.2)
     maruku (0.7.1)
     method_source (0.8.2)
     multi_xml (0.5.5)
@@ -18,10 +17,11 @@ GEM
       coderay (~> 1.0)
       method_source (~> 0.8)
       slop (~> 3.4)
+    puma (2.8.1)
+      rack (>= 1.1, < 2.0)
     rack (1.5.2)
     rack-protection (1.5.2)
       rack
-    raindrops (0.13.0)
     sinatra (1.4.4)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -31,10 +31,6 @@ GEM
     uglifier (2.4.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
-    unicorn (4.8.2)
-      kgio (~> 2.6)
-      rack
-      raindrops (~> 0.7)
 
 PLATFORMS
   ruby
@@ -45,6 +41,6 @@ DEPENDENCIES
   maruku
   newrelic_rpm
   pry
+  puma
   sinatra
   uglifier
-  unicorn
