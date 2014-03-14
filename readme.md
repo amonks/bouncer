@@ -29,3 +29,12 @@ set `@baseurl` to the url heroku gives you
 	git commit -am 'set url'
 	git push heroku master
 	heroku open
+
+### protip: install newrelic addon to prevent your app from going to sleep
+
+	heroku addons:add newrelic
+
+go to the app's page on your heroku dashboard and click newrelic to get to your New Relic dashboard. Follow their instructions, generating a `newrelic.yml` file and putting it in `config/`.
+
+	git commit -am 'configure newrelic'
+	git push heroku master
