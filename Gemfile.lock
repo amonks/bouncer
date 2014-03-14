@@ -13,6 +13,7 @@ GEM
     maruku (0.7.1)
     method_source (0.8.2)
     multi_xml (0.5.5)
+    newrelic_rpm (3.7.3.204)
     pry (0.9.12.6)
       coderay (~> 1.0)
       method_source (~> 0.8)
@@ -42,6 +43,7 @@ DEPENDENCIES
   haml
   httparty
   maruku
+  newrelic_rpm
   pry
   sinatra
   uglifier
