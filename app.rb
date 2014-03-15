@@ -29,10 +29,7 @@ end
 
 # index or query string
 get '/' do
-  halt haml :index if request.query_string.length < 2
-
-  url = request.query_string
-  bounce(url)
+  halt haml :index
 end
 
 # url

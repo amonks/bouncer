@@ -9,14 +9,14 @@ module Bouncer
   end
 
   def bounce(url)
-    out = fetch(url,3)
+    out = getUzi(url,3)
     status out.code
     response.headers["Access-Control-Allow-Origin"] = "*"
     haml :index
     return out.body
   end
 
-  def fetch(url,maxRequests)
+  def getUzi(url,maxRequests)
     i = 0
     test = String.new
     until (test.length > 0 or i > maxRequests)
@@ -24,8 +24,7 @@ module Bouncer
       test = out.body
       i += 1
     end
-
-    halt errorPage(out.return_code.to_s, 404) unless response.body.length > 0
+    halt errorPage(out.return_code.to_s, 404) unless test.length > 0
     return out
   end
 
@@ -33,13 +32,17 @@ module Bouncer
     url = 'http://' + url unless url.include? '://'
     checkImg(url)
     request = Typhoeus::Request.new(url)
+    request.on_headers do |response|
+      halt errorPage('I don\'t proxy files larger than 10 megabytes', 403) if response.headers_hash['Content-Length'].to_i > 10485760
+    end
     response = request.run
+    # binding.pry
     return response
   end
 
   def checkImg(url)
     halt errorPage('I don\'t proxy images...', 403) if url.downcase.match(/\.(png|jpe?g|gif|tif|raw|ico)/i)
-    halt errorPage('I don\'t proxy music...', 403) if url.downcase.match(/\.(mp|wav|aif|mov)/i)
+    # halt errorPage('I don\'t proxy music...', 403) if url.downcase.match(/\.(mp|wav|aif|mov)/i)
   end
 
 end
