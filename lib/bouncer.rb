@@ -11,6 +11,7 @@ module Bouncer
   def bounce(url)
     out = getUzi(url,3)
     status out.code
+    content_type out.headers_hash['Content-Type']
     response.headers["Access-Control-Allow-Origin"] = "*"
     haml :index
     return out.body
