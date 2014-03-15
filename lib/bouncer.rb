@@ -24,7 +24,8 @@ module Bouncer
       test = out.body
       i += 1
     end
-    halt errorPage(out.return_code.to_s, out.code) unless response.body.length > 0
+
+    halt errorPage(out.return_code.to_s, 404) unless response.body.length > 0
     return out
   end
 
