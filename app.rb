@@ -8,7 +8,7 @@ Bundler.require
 
 configure do
   set :baseUrl, @baseUrl
-  set :environment, :production
+  # set :environment, :production
 end
 
 # bouncer
