@@ -4,17 +4,17 @@
 
 I gotta say—I'm a follower. I've wholeheartedly jumped on the all-client-side-everything bandwagon. But there are some things you traditionally can't do on the client side.
 
-#### Have you ever tried to load externally-hosted data from javascript?
+#### Have you ever tried to load externally-hosted data from javascript? <span class=" You can't..."></span>
 
 The 90% of the times when I have to resort to server-side code, it's to get data from a website—make an API request, load a page, who knows. 
 
 If you try to make an HTTP request from client-side javascript, you'll usually get an error because of the [same-origin policy](http://en.wikipedia.org/wiki/Same-origin_policy). Essentially servers keep a whitelist of hosts that can request each page from javascript.
 
-### [[@baseUrl]]!
+### [[@baseUrl]]! <span class="small">Thank god!</span>
 
 In comes `[[@baseUrl]]`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
 
-#### How?
+#### How? <span class="small">It's easy!</span>
 
 Simply add `http://[[@baseUrl]]/` to the beginning of the url you're requesting, eg `http://[[@baseUrl]]/google.com`.
 
