@@ -1,6 +1,6 @@
 # Bouncer
 
-Bouncer is a super simple sinatra-based proxy for client apps that only need a server for making requests.
+Bouncer is a super simple proxy with a liberal cross-origin request policy. It's ideal when you're making a client-side app, you need to pull in data from an external source, and you don't feel like hacking up a server to solve that problem for the thousandth time.
 
 Bouncer uses [puma](http://puma.io/) for multithreaded asynchronicity. You can change the maximum number of threads or workers in `config/puma.rb`.
 
@@ -26,6 +26,10 @@ set `@baseurl` to `'localhost:3000'`
 open `http://localhost:3000` in your browser
 
 ## push to heroku
+
+[Heroku](https://www.heroku.com/) is an app-serving/hosting company that makes it super easy and free to delpoy server side apps to their servers.
+
+This assumes you have a Heroku account, and that you've installed their [Heroku Toolbelt](https://devcenter.heroku.com/articles/heroku-command#installing-the-heroku-cli)
 
 	heroku apps:create
 

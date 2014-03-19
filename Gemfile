@@ -9,3 +9,4 @@ gem 'typhoeus'
 gem 'uglifier'
 gem 'puma'
 gem 'newrelic_rpm'
+gem 'bacon', :group => :test
