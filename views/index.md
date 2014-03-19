@@ -4,7 +4,7 @@
 
 I gotta say—I'm a follower. I've wholeheartedly jumped on the all-client-side-everything bandwagon. But there are some things you traditionally can't do on the client side.
 
-#### Have you ever tried to load externally-hosted data from javascript? <span class=" You can't..."></span>
+#### Have you ever tried to load externally-hosted data from javascript? <span class="small">You can't...</span>
 
 The 90% of the times when I have to resort to server-side code, it's to get data from a website—make an API request, load a page, who knows. 
 
