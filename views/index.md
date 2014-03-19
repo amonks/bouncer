@@ -1,8 +1,6 @@
 ## Howdy! <span class="small">I'm [Andrew](http://monks.co/).</span>
 
-#### Are you into client-side development?
-
-I am. 
+#### Are you into client-side development? <span class="small">I sure am.</span>
 
 I gotta say—I'm a follower. I've wholeheartedly jumped on the all-client-side-everything bandwagon. But there are some things you traditionally can't do on the client side.
 
