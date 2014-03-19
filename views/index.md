@@ -1,10 +1,10 @@
 ## Howdy! <span class="small">I'm [Andrew](http://monks.co/).</span>
 
-#### Are you into client-side development? <span class="small">I sure am.</span>
+### Are you into client-side development? <span class="small">I sure am.</span>
 
 I gotta say—I'm a follower. I've wholeheartedly jumped on the all-client-side-everything bandwagon. But there are some things you traditionally can't do on the client side.
 
-#### Have you ever tried to load externally-hosted data from javascript? <span class="small">You can't...</span>
+### Have you ever tried to load externally-hosted data from javascript? <span class="small">You can't...</span>
 
 The 90% of the times when I have to resort to server-side code, it's to get data from a website—make an API request, load a page, who knows. 
 
@@ -14,7 +14,7 @@ If you try to make an HTTP request from client-side javascript, you'll usually g
 
 In comes `[[@baseUrl]]`. It's a super simple proxy for getting around the same-origin policy. It accepts requests from anyone anywhere. 
 
-#### How? <span class="small">It's easy!</span>
+### How? <span class="small">It's easy!</span>
 
 Simply add `http://[[@baseUrl]]/` to the beginning of the url you're requesting, eg `http://[[@baseUrl]]/google.com`.
 
