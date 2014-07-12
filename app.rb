@@ -34,7 +34,10 @@ end
 
 # url
 get '/*' do
-  url = params[:splat].join.gsub(':/', '://').to_s
+  url = params[:splat].join.gsub(':/', '://').to_s 
+  if (request.query_string.length > 0)
+    url = url + "?" + request.query_string
+  end
   binding.pry
   bounce(url)
 end
