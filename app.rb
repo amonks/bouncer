@@ -38,6 +38,6 @@ get '/*' do
   if (request.query_string.length > 0)
     url = url + "?" + request.query_string
   end
-  binding.pry
+  # binding.pry
   bounce(url)
 end

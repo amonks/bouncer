@@ -3,7 +3,6 @@ GEM
   specs:
     backports (3.6.0)
     bacon (1.2.0)
-    coderay (1.1.0)
     ethon (0.6.3)
       ffi (>= 1.3.0)
       mime-types (~> 1.18)
@@ -13,14 +12,9 @@ GEM
       tilt
     json (1.8.1)
     maruku (0.7.1)
-    method_source (0.8.2)
     mime-types (1.25.1)
     multi_json (1.9.0)
     newrelic_rpm (3.7.3.204)
-    pry (0.9.12.6)
-      coderay (~> 1.0)
-      method_source (~> 0.8)
-      slop (~> 3.4)
     puma (2.8.1)
       rack (>= 1.1, < 2.0)
     rack (1.5.2)
@@ -39,7 +33,6 @@ GEM
       rack-test
       sinatra (~> 1.4.0)
       tilt (~> 1.3)
-    slop (3.4.7)
     tilt (1.4.1)
     typhoeus (0.6.7)
       ethon (~> 0.6.2)
@@ -55,7 +48,6 @@ DEPENDENCIES
   haml
   maruku
   newrelic_rpm
-  pry
   puma
   sinatra
   sinatra-contrib
